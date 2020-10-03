@@ -9,13 +9,17 @@ import { Mainclass } from 'src/app/main-class/mainclass';
 
 export class MainComponent implements OnInit {
 
-  main:Mainclass[]
+  main:Mainclass;
   
   constructor( private mainService:MainService) { }
 
   ngOnInit()  {
-    return this.mainService.getData()
-      .subscribe(data => this.main = new Mainclass(data.username))
+
+    
+     this.mainService.getData()
+      .subscribe(data => /* this.main = new Mainclass(Mainclass.username */ 
+        console.log(data))
+        
   }
 
 }
