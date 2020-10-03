@@ -1,0 +1,39 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  text-center">
+        <a class="navbar-brand" href="#">GITHUB SEARCH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#">Home</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container" color="accent">
+        <mat-form-field appearance="fill">
+          <mat-label>Github name</mat-label>
+          <input matInput>
+        </mat-form-field>
+        
+        <button mat-flat-button (click)=getData() >Search</button>
+      </div>
+
+    <div  style="height: 200px">
+        <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile>
+              <mat-card>
+                  <mat-card-title align="center">HELLO</mat-card-title>
+                  <mat-card-content>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum vero facilis nesciunt unde facere provident error odit ea ipsum odio?</mat-card-content>
+         
+                  <mat-card-actions align="end"> 
+                      <button mat-button-raised> More</button>
+                  </mat-card-actions>
+              </mat-card>
+          </mat-grid-tile>
+          
+        </mat-grid-list>
+    </div>
+     
+</div>
