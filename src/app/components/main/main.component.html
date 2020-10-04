@@ -14,10 +14,10 @@
       <div class="container" color="accent">
         <mat-form-field appearance="fill">
           <mat-label>Github name</mat-label>
-          <input matInput>
+          <input matInput color="warn" #inputvalue>
         </mat-form-field>
         
-        <button mat-flat-button (click)=getData() >Search</button>
+        <button mat-flat-button (click)="getUser(inputvalue.value)" >Search</button>
       </div>
 
     <div  style="height: 200px">
