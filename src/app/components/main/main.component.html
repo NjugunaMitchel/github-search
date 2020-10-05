@@ -1,39 +1,43 @@
 <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  text-center">
-        <a class="navbar-brand" href="#">GITHUB SEARCH</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" href="#">Home</a>
-          </div>
-        </div>
-      </nav>
-
-      <div class="container" color="accent">
-        <mat-form-field appearance="fill">
-          <mat-label>Github name</mat-label>
-          <input matInput color="warn" #inputvalue>
-        </mat-form-field>
-        
-        <button mat-flat-button (click)="getUser(inputvalue.value)" >Search</button>
-      </div>
-
-    <div  style="height: 200px">
-        <mat-grid-list cols="2" rowHeight="2:1">
+  
+    <div class=" container section">
+        <mat-grid-list cols="2">
           <mat-grid-tile>
               <mat-card>
-                  <mat-card-title align="center">HELLO</mat-card-title>
-                  <mat-card-content>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum vero facilis nesciunt unde facere provident error odit ea ipsum odio?</mat-card-content>
-         
-                  <mat-card-actions align="end"> 
-                      <button mat-button-raised> More</button>
-                  </mat-card-actions>
+                <image mat-card-image>
+                  <img src="{{avatar}}">
+                </image>
+                  <mat-card-title align="center">{{user}}</mat-card-title>
+                  <mat-card-content>
+                    <div class="stats">
+                      <span class="label">{{followers}} Followers</span>
+                    <!-- <span class="label label-default">{{repos}} Public Repos</span> -->
+                    <span class="label">{{following}} Following</span>
+                    </div>
+                  
+                    <ul class="list-group">
+                      <li class="list-group-item"><strong>Username: </strong>{{username}}</li> 
+                       <li class="list-group-item"><strong>Location: </strong>{{location}}</li>
+                          <li class="list-group-item"><strong>Member Since: </strong>{{created_at | date}}</li>  
+                  </ul>
+                  </mat-card-content>
+                    
               </mat-card>
           </mat-grid-tile>
-          
-        </mat-grid-list>
+          <mat-grid-tile>
+         <br>
+         <div>
+           <h1>{{user}}'s repositories</h1> <br>
+           <ul>
+             <li *ngFor ="let repo of repos"> <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></li>
+             <hr>
+           </ul>
+         </div>
+        </mat-grid-tile>
+        
+      </mat-grid-list>
+      
     </div>
+    
      
 </div>

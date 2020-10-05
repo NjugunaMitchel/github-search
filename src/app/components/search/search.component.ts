@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from 'src/app/main-service/main.service';
-import { JsonPipe } from '@angular/common';
+;
 
 
 @Component({
@@ -9,36 +9,39 @@ import { JsonPipe } from '@angular/common';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  
  
 
-  constructor() { }
-
+  constructor( private mainService:MainService) { }
+  ngOnInit() {
+    
+  }
+  username:any;
+  user:any;
+  repos:any;
+  avatar:any;
+  following: any;
+  location: any;
+  created_at: any;
+  followers:any;
   
-    mainService: any;
-    user:any;
-    username:string;
-    repos:any;
-    avatar:any;
-
   getUser(){
-    this.mainService.updateuser(this.username)
-      console.log(this.username)
+    this.mainService.updateusername(this.username)
+      
 
       this.mainService.getData()
       .subscribe(user =>
        {
-         console.log(user)
          this.user = user
-         /* this.avatar = data.avatar_url */
-       })
+       });
 
-       this.mainService.getRepos(name).subscribe(repos =>{
-       this.repos = repos
+       this.mainService.getRepos().subscribe(repos =>{
+       this.repos = repos;
      })
      
      
    }
-   ngOnInit() {}
+   
   }
 
 

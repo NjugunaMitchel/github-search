@@ -1,4 +1,46 @@
+mat-card{
+    width:500px;
+}
 mat-grid-tile{
-    background-color: black;
-    color:#c0c0c0;
+    height:60%;
+    width:60%;
+    padding:20px;
+}
+image{
+    display: inline;
+}
+
+img{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+}
+
+.fullWidth{
+    width:60%;
+}
+button{
+    width:60%;
+}
+
+.repositoryDisplay{
+    background-color: #c0c0c0;
+    color:#333;
+}
+
+.section{
+    color:white;
+    margin:0 auto;
+}
+
+.list-group-item{
+    color:black
+}
+
+ul{
+    list-style-type:none;
+}
+
+.label{
+    margin:3px
 }

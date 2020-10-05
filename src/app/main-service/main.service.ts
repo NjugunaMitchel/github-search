@@ -35,7 +35,7 @@ export class MainService {
   }
 
 
-  updateuser(username:string){
+  updateusername(username:string){
     this.username = username;
   }
   

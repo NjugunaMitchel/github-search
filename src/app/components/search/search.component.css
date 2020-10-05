@@ -9,3 +9,24 @@ input{
 span{
     color:black
 }
+mat-card{
+    width:500px;
+}
+
+
+.section{
+    color:white;
+    margin:0 auto;
+}
+
+.list-group-item{
+    color:black
+}
+
+ul{
+    list-style-type:none;
+}
+
+.label{
+    margin:3px
+}
