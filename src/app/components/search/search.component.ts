@@ -9,14 +9,14 @@ import { MainService } from 'src/app/main-service/main.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  
+  username:any;
  
 
   constructor( private mainService:MainService) { }
   ngOnInit() {
     
   }
-  username:any;
+  
   user:any;
   repos:any;
   avatar:any;
@@ -26,13 +26,21 @@ export class SearchComponent implements OnInit {
   followers:any;
   
   getUser(){
-    this.mainService.updateusername(this.username)
+    this.mainService.updateusername(this.username);
       
-
       this.mainService.getData()
       .subscribe(user =>
        {
-         this.user = user
+         this.user = user;
+         this.followers = user.followers
+         this.user = user.name
+          this.username = user.login
+          this.repos = user.repos_url
+          this.avatar =user.avatar_url 
+          this.location = user.location
+          this.created_at = user.created_at
+          this.followers = user.followers
+          this.following = user. following
        });
 
        this.mainService.getRepos().subscribe(repos =>{
