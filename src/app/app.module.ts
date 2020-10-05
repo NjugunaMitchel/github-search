@@ -8,11 +8,16 @@ import { MaterialModule } from './material/material.module';
 import { MainComponent } from './components/main/main.component';
 import { HttpClientModule }  from '@angular/common/http';
 import { MainService } from './main-service/main.service';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    SearchComponent,
+    NavbarComponent
     
   ],
   imports: [
@@ -20,7 +25,8 @@ import { MainService } from './main-service/main.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]
