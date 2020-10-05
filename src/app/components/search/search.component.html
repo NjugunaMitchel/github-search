@@ -1,1 +1,44 @@
-<p>search works!</p>
+    <div class="container" color="accent"  align="center">
+        <mat-form-field appearance="fill" class="fullWidth">
+          <mat-label>Github name</mat-label>
+          <input matInput color="warn" #inputvalue [(ngModel)]="username" name="username" (keyup) = "getUser()">
+        </mat-form-field><br>
+    
+      </div>
+
+      <div>
+  
+        <div class=" container section">
+            <mat-grid-list cols="1">
+              <mat-grid-tile>
+                  <mat-card>
+                      <mat-card-title align="center">{{user}}</mat-card-title>
+                    <image mat-card-image>
+                      <img src="{{user.avatar_url}}">
+                    </image>
+                     <!--  <mat-card-content><div class="stats">
+                          <span class="label label-success">{{user.followers_url}} Followers</span>
+                        <span class="label label-default">{{user.public_repos}} Public Repos</span>
+                        <span class="label label-primary">{{user.public_gists}} Public Gists</span>
+                        <span class="label label-info">{{user.following_url}} Following</span>
+                        </div>
+                    </mat-card-content> -->
+                        
+                  </mat-card>
+             <br>
+             <div>
+               <h1>{{user}}'s repositories</h1> <br>
+               <ul>
+                 <li *ngFor ="let repo of repos">  {{repo.name}}</li>
+                 <hr>
+               </ul>
+             </div>
+              </mat-grid-tile>
+              
+            </mat-grid-list>
+            
+        </div>
+         
+    </div>
+    
+     
