@@ -8,13 +8,35 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class MainService {
-  private _url:string = environment.giturl + name + environment.apikey
+  repos: any;
+   private username = 'mishel254';
+   giturl:'https://api.github.com/users/'
+   private apikey ='817524962c7021c10455fbc8a92a4c866174a972'
+
+  private _url:string =('https://api.github.com/users/' + this.username + '?access_token=' + this.apikey);
+
+  private _urlRepo = ('https://api.github.com/users/' + this.username + '/repos?/access_token=' + this.apikey);
+
 
   constructor(private http: HttpClient) { }
  
+  getDisplay():Observable<any>{
+    return this.http.get<any>(this._url) 
+    
+  }
 
   getData():Observable<any>{
-    return this.http.get<any>(this._url);
+    return this.http.get<any>(this._url)
+    
   }
- 
+
+  getRepos(){
+    return this.http.get<any>(this._urlRepo)
+  }
+
+
+  updateuser(username:string){
+    this.username = username;
+  }
+  
 }
