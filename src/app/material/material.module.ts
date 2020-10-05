@@ -3,7 +3,7 @@ import { MatCardModule }  from '@angular/material/card';
 import { MatButtonModule }  from  '@angular/material/button';
 import {  MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field'
-
+import { MatInputModule }  from '@angular/material/input'
 
 
 const MaterialComponents = [
@@ -11,6 +11,7 @@ const MaterialComponents = [
   MatButtonModule,
   MatGridListModule,
   MatFormFieldModule,
+  MatInputModule
 ]
 
 
