@@ -1,8 +1,8 @@
 <div>
   
     <div class=" container section">
-        <mat-grid-list cols="2">
-          <mat-grid-tile>
+        <mat-grid-list cols="1" rowHeight="600px" >
+          <mat-grid-tile class="one">
               <mat-card>
                 <image mat-card-image>
                   <img src="{{avatar}}">
@@ -23,12 +23,14 @@
                   </mat-card-content>
                     
               </mat-card>
-          </mat-grid-tile>
-          <mat-grid-tile>
-         <br>
-         <div>
+          <!-- </mat-grid-tile>
+          <mat-grid-tile > -->
+         
+         <div class="repositoryDisplay">
            <h1>{{user}}'s repositories</h1> <br>
+           
            <ul>
+             <h5>click to view</h5>
              <li *ngFor ="let repo of repos"> <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></li>
              <hr>
            </ul>

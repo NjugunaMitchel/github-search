@@ -1,11 +1,15 @@
+.container{
+    height:100vh
+}
 mat-card{
     width:500px;
 }
 mat-grid-tile{
-    height:60%;
-    width:60%;
-    padding:20px;
+    padding:0px;
+    margin:0px;
+    background-color: #c0c0c0;
 }
+
 image{
     display: inline;
 }
@@ -16,21 +20,28 @@ img{
     border-radius: 50%;
 }
 
-.fullWidth{
-    width:60%;
-}
 button{
     width:60%;
 }
 
-.repositoryDisplay{
-    background-color: #c0c0c0;
-    color:#333;
+.repositoryDisplay{  
+    color:black;
 }
 
 .section{
     color:white;
     margin:0 auto;
+}
+
+li{
+    font-size: larger;
+    border-bottom: 2px solid #160f0f6e;
+   
+}
+
+a{
+    color:black
+
 }
 
 .list-group-item{
@@ -43,4 +54,8 @@ ul{
 
 .label{
     margin:3px
+}
+
+h1{
+    padding-bottom:2px
 }

@@ -7,7 +7,7 @@ const routes: Routes = [
   {path:'main',component:MainComponent},
   {path:'search',component:SearchComponent},
 
-  { path: ' ', redirectTo:"/main", pathMatch:"full"},
+  { path: '', redirectTo:"/main", pathMatch:"full"},
 ];
 
 @NgModule({

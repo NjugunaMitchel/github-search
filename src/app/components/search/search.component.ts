@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from 'src/app/main-service/main.service';
-;
+import { DisplayService } from 'src/app/main-service/display.service';
+
 
 
 @Component({
@@ -9,29 +9,27 @@ import { MainService } from 'src/app/main-service/main.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  username:any;
- 
 
-  constructor( private mainService:MainService) { }
-  ngOnInit() {
-    
-  }
-  
-  user:any;
+ username = 'mishel254';
+ user:any;
   repos:any;
   avatar:any;
   following: any;
   location: any;
   created_at: any;
   followers:any;
-  
+
+  constructor( private DisplayService:DisplayService) { }
+  ngOnInit() {
+    
+  }
   getUser(){
-    this.mainService.updateusername(this.username);
+    this.DisplayService.updateusername(this.username);
       
-      this.mainService.getData()
+      this.DisplayService.getData()
       .subscribe(user =>
        {
-         this.user = user;
+         
          this.followers = user.followers
          this.user = user.name
           this.username = user.login
@@ -43,11 +41,9 @@ export class SearchComponent implements OnInit {
           this.following = user. following
        });
 
-       this.mainService.getRepos().subscribe(repos =>{
+       this.DisplayService.getRepos().subscribe(repos =>{
        this.repos = repos;
-     })
-     
-     
+     }) 
    }
    
   }

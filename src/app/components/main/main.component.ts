@@ -13,8 +13,6 @@ import { HttpClient } from '@angular/common/http';
 export class MainComponent implements OnInit {
 
   main:Mainclass;
-  nam:string;
-
   username:string;
   user:any;
   repos:any;
@@ -46,18 +44,5 @@ export class MainComponent implements OnInit {
    }
 
   
-  /* 
-   getUser(){
-     this.mainService.updateuser(this.username)
-      console.log(this.username)
-     
-     this.mainService.getData()
-     .subscribe(data =>
-      {
-        console.log(data)
-        this.user = data.login
-        this.avatar = data.avatar_url
-      })
-    } */
 
       }

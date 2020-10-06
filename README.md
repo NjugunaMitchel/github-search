@@ -1,4 +1,31 @@
-# GithubSearch
+## GithubSearch
+Github user search
+
+
+## Description
+The app allows you to search for github users and lists there repositories.
+
+
+
+### BDD
+
+
+ + Functionality should be as illustrated
+
+## TECHNOLOGIES USED
+
+Technologies | Purpose
+------|---------
+HTML |  Contents
+css | styling
+Angular Material| Design
+Angular
+
+
+#### FOLLOW ME ON 
+------|
+ _Twitter_  **https://twitter.com/Muthonim7**
+_Github_   **https://github.com/mishel254**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
